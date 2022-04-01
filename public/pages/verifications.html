@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Verifications as a service</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/styles/verifications.css">
+</head>
+<body>
+  <div class="animated-title">
+    <div class="text-top">
+      <div>
+        <span>Checking Amount's block chain</span>
+        <span>Analyzing sweat sensors</span>
+        <span>Tracing social media posts</span>
+        <span>{{some buzzword here}}</span>
+        <span>Hold on almost there</span>
+      </div>
+    </div>
+    <div class="text-bottom">
+      <div id="message"></div>
+    </div>
+  </div>
+  <script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const scene = urlParams.get('scene')
+
+    if(scene != null) {
+      setTimeout(function() {
+        window.open(`/?scene=${scene}&purchased=true`, "_self");
+      }, 23000);
+    }
+
+    document.querySelector("#message").innerText = scene == "nft" ? "Nope!": "Approved!"
+
+    // Set color on "processed" values I know this is bad but hey took me 30 secs
+    setTimeout(function() {
+      document.querySelector("body > div > div.text-top > div > span:nth-child(1)").classList.add("processed");
+    }, 6000);
+
+    setTimeout(function() {
+      document.querySelector("body > div > div.text-top > div > span:nth-child(2)").classList.add("processed");
+    }, 12750);
+
+    setTimeout(function() {
+      document.querySelector("body > div > div.text-top > div > span:nth-child(3)").classList.add("processed");
+    }, 15750);
+
+    setTimeout(function() {
+      document.querySelector("body > div > div.text-top > div > span:nth-child(4)").classList.add("processed");
+    }, 19500);
+
+    setTimeout(function() {
+      document.querySelector("body > div > div.text-top > div > span:nth-child(5)").classList.add("processed");
+    }, 20000);
+  </script>
+</body>
+</html>

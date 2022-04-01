@@ -1,0 +1,100 @@
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans",sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+body{
+  background-color: #17a2b8;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.demo-table{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: min(1600px, 100%);
+  margin-top: 50px;
+}
+
+.demo-card{
+  flex: 1;
+  max-width: 360px;
+  background-color: #fff;
+  margin: 20px 10px;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+  color: #2d2d2d;
+  transition: .3s linear;
+  border-radius: 25px;
+}
+
+.demo-card-header{
+  background-color: #015764;
+  display: inline-block;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 0 0 20px 20px;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: .4s linear;
+}
+
+.demo-card:hover .demo-card-header{
+  box-shadow: 0 0 0 26em #015764;
+}
+
+.demo-card p {
+  padding: 20px;
+  min-height: 150px;
+}
+
+.demo-card:hover ,.demo-card:hover .price{
+  color: #fff;
+}
+
+.load-btn{
+  display: inline-block;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  border: 2px solid #3db5c7;
+  color: #3db5c7;
+  padding: 18px 40px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: .3s linear;
+}
+
+.load-btn:hover{
+  background-color: #3db5c7;
+  color: #fff;
+}
+
+@media screen and (max-width:1100px){
+  .demo-card{
+    flex: 50%;
+  }
+}
+
+.a-enter-vr {
+  margin-top: 50px !important; 
+  top: 0px !important;
+  left: 0px !important;
+}
